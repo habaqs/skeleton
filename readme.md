@@ -113,3 +113,9 @@ Voir aussi [MVC.md](Documentation/MVC.md)
 - vendor
     - *autoload.php*
     - ...
+
+---
+# installation
+`composer install`
+# Start
+`php -S localhost:8000 -t Public/`
