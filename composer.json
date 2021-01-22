@@ -1,0 +1,19 @@
+{
+    "name": "habaqs/app",
+    "description": "Web site",
+    "authors": [
+        {
+            "name": "Habacuc Emile",
+            "email": "habacuc.reginald@gmail.com",
+            "homepage": "https://github.com/habaqs"
+        }
+    ],
+    "autoload": {
+        "psr-4": {
+            "App\\": "App/"
+        }
+    },
+    "require-dev": {
+        "symfony/var-dumper": "^5.2"
+    }
+}

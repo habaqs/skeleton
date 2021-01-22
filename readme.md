@@ -84,7 +84,7 @@ peut être *resources (english)*
 `Folder : ???`
 
 ---
-Voir aussi [MVC.md](MVC.md)
+Voir aussi [MVC.md](Documentation/MVC.md)
 
 ---
 **L'organisation du projet pourrait évoluer comme ceci par la suite.**
@@ -106,9 +106,10 @@ Voir aussi [MVC.md](MVC.md)
     - *wireframe.pdf*
     - ...
 - *.htaccess*
-- *.gitignore* -> on ignore le composer.lock et le dossier vendor
+- *.gitignore* -> on ignore le composer.lock/phar et le dossier vendor
 - *Composer.json*
 - *Composer.lock*
+- *readme.md*
 - vendor
     - *autoload.php*
     - ...
