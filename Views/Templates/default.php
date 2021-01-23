@@ -18,5 +18,4 @@
 <body>
     <?= $content ?>
 </body>
-
 </html>
