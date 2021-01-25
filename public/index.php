@@ -23,6 +23,10 @@ $rooter->map('GET|POST','[*: page]','404');
 //$rooter->map('GET','/legal','');
 */
 $match = $rooter->match();
-$match['target']();
-//dump($match);
+if($match){
+    $match['target']();
+    dump($_GET,$_POST);
+}else{
+    dump($match,$_SERVER);
+}
 
