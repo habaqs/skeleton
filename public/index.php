@@ -1,32 +1,21 @@
 <?php
 /*
+ * La page index à pour role de faire l'autoloading et le rooting
  * rôles :
- *    - autoload
- *    - rooter -> c'est en fonction de la page demander charger le bon controller. 
- *    --https://www.youtube.com/watch?v=tbYa0rJQyoM -> à 15minutes à peut près
+ *    - autoload : permet de charger dynamiquement les classe
+ *    - rooter -> s'occupe de charger le bon controller. voir http://altorouter.com/ 
+ *    - https://www.youtube.com/watch?v=tbYa0rJQyoM -> à 15minutes à peut près
  */
+//Autoloading
 require_once '../vendor/autoload.php';
-
+//Rooting
 $rooter = new AltoRouter();
 $rooter->map('GET','/',function(){
     require_once '../Controllers/home.php';
 },'home');
-/*
-$rooter->map('GET','/shop','shop');
-$rooter->map('GET','/admin','admin');
-$rooter->map('GET','/member','member');
-$rooter->map('GET','/connexion','connexion');
-$rooter->map('GET','/register','register');
-$rooter->map('GET','/forget','forget');
-$rooter->map('GET','/panier','basket');
-$rooter->map('GET|POST','[*: page]','404');
-//$rooter->map('GET','/legal','');
-*/
 $match = $rooter->match();
 if($match){
     $match['target']();
-    dump($_GET,$_POST);
-}else{
-    dump($match,$_SERVER);
 }
+dump($match,$_SERVER,$_GET,$_POST);
 
