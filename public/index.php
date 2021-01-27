@@ -18,4 +18,3 @@ if($match){
     $match['target']();
 }
 dump($match,$_SERVER,$_GET,$_POST);
-
